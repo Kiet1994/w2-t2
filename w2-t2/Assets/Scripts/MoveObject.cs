@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveObject : MonoBehaviour
 {
-    public float Diff; // diff <0.2
+    public float Diff; // Diff < 0.2
     public float MoveSpeed; 
     private int currentIndex = 0; //
 
@@ -35,7 +35,7 @@ public class MoveObject : MonoBehaviour
             }
             Vector3 dir = (points[currentIndex] - transform.position).normalized;
             transform.Translate(dir * MoveSpeed * Time.deltaTime, Space.World);
-            
+            transform.LookAt(points[currentIndex]);
         }
     }
 }
