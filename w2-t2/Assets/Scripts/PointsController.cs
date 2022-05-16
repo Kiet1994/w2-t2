@@ -40,5 +40,14 @@ public class PointsController : MonoBehaviour
     {
         return new Vector3(Random.Range(minRange, maxRange), 0, Random.Range(minRange, maxRange));
     }
-   
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        for (int i = 0; i < PosPoints.Length; i++)
+        {
+            int nextPointIndex = i + 1;
+            if (nextPointIndex >= PosPoints.Length) nextPointIndex = 0;
+            Gizmos.DrawLine(PosPoints[i], PosPoints[nextPointIndex]);
+        }
+    }
 }
