@@ -153,16 +153,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ZOffsetCamera: 5
-  Loop: 0
+  Loop: 1
   LineColor: {r: 0.38153064, g: 0.8773585, b: 0.25161976, a: 0}
   ObjectColor: {r: 0.8773585, g: 0.20195799, b: 0.20195799, a: 0}
   ObjectScale: 1
   Diff: 1
   AddMiddlePoint: 0
-  Positions: []
+  Positions:
+  - {x: 40.891033, y: 54.856358, z: 25.673758}
+  - {x: 39.281715, y: 55.796593, z: 24.85964}
+  - {x: 38.920227, y: 55.75781, z: 22.038603}
+  - {x: 40.694336, y: 54.555874, z: 21.190378}
+  - {x: 41.04347, y: 54.592094, z: 24.127026}
   SelectedPointIndex: -1
-  AddPointIndex: 0
-  AddPoint: {x: 0, y: 0, z: 0}
+  AddPointIndex: -1
+  AddPoint: {x: 41.73692, y: 54.168198, z: 24.054813}
 --- !u!4 &114961793
 Transform:
   m_ObjectHideFlags: 0
@@ -502,8 +507,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointController: {fileID: 114961792}
   dirColor: {r: 0.22356708, g: 0.3323583, b: 0.754717, a: 0}
-  MoveSpeed: 30
-  Diff: 1
+  MoveSpeed: 10
+  Diff: 0.2
   CurrentPointIndex: 0
 --- !u!65 &1017400516
 BoxCollider:
