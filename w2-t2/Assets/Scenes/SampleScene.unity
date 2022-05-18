@@ -290,6 +290,7 @@ MonoBehaviour:
   pointerMinutes: {fileID: 445071966}
   pointerHours: {fileID: 1918899802}
   clockSpeed: 1
+  AddHour: 2
 --- !u!1 &445071966 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 101354, guid: 4073f41b7d930f94d9470df64ec12b53, type: 3}
@@ -999,26 +1000,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 192248, guid: 4073f41b7d930f94d9470df64ec12b53, type: 3}
   m_PrefabInstance: {fileID: 300385855}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6338241980044333067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6338241980055555665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cc9866e43e6cb94aae3334c5fc896cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minutes: 0
-  hour: 0
-  seconds: 0
-  realTime: 1
-  pointerSeconds: {fileID: 6338241980055605745}
-  pointerMinutes: {fileID: 6338241980055532771}
-  pointerHours: {fileID: 6338241980055522533}
-  clockSpeed: 1
 --- !u!23 &6338241980053068665
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1446,7 +1427,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6338241980055385557}
-  - component: {fileID: 6338241980044333067}
   m_Layer: 0
   m_Name: Arrow
   m_TagString: Untagged

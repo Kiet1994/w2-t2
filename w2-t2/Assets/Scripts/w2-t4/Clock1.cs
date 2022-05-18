@@ -6,7 +6,7 @@ public class Clock1 : MonoBehaviour {
 	//-- set start time 00:00
     public int minutes = 0;
     public int hour = 0;
-	public int seconds = 0;
+	public float seconds = 0;
 	public bool realTime = true;
 	
 	public GameObject pointerSeconds;
@@ -33,11 +33,8 @@ void Start()
 void Update() 
 {
     //-- calculate time
-    msecs += Time.deltaTime * clockSpeed;
-    if(msecs >= 1.0f)
-    {
-        msecs -= 1.0f;
-        seconds++; // + s
+    seconds += Time.deltaTime * clockSpeed;
+    
         if(seconds >= 60)
         {
             seconds = 0;
@@ -50,12 +47,12 @@ void Update()
                     hour = 0;
             }
         }
-    }
+    
 
 
     //-- calculate pointer angles
     float rotationSeconds = (360.0f / 60.0f)  * seconds;
-    float rotationMinutes = (360.0f / 60.0f)  * minutes;
+    float rotationMinutes = ((360.0f / 60.0f)  * minutes + 0.1f *seconds);// 1 phut = 6 do, + 6/60* s? giây hi?n t?i
     float rotationHours   = ((360.0f / 12.0f) * hour) + ((360.0f / (60.0f * 12.0f)) * minutes);
 
     //-- draw pointers
