@@ -15,7 +15,7 @@ public class Clock : MonoBehaviour {
     
     //-- time speed factor
     public float clockSpeed = 1.0f;     // 1.0f = realtime, < 1.0f = slower, > 1.0f = faster
-    public float AddHour;
+    public int AddHour;
     //-- internal vars
     float msecs = 0;
 
@@ -24,7 +24,7 @@ void Start()
 	//-- set real time
 	if (realTime)
 	{
-		hour = System.DateTime.Now.Hour;
+		hour = System.DateTime.Now.Hour + AddHour;
 		minutes = System.DateTime.Now.Minute;
 		seconds = System.DateTime.Now.Second;
 	}
@@ -56,7 +56,7 @@ void Update()
     //-- calculate pointer angles
     float rotationSeconds = (360.0f / 60.0f)  * seconds;
     float rotationMinutes = (360.0f / 60.0f)  * minutes;
-    float rotationHours   = ((360.0f / 12.0f) * (hour + AddHour)) + ((360.0f / (60.0f * 12.0f)) * minutes);
+    float rotationHours   = ((360.0f / 12.0f) * hour) + ((360.0f / (60.0f * 12.0f)) * minutes);
 
     //-- draw pointers
     pointerSeconds.transform.localEulerAngles = new Vector3(0.0f, 0.0f, rotationSeconds);
